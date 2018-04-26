@@ -1,0 +1,174 @@
+html, body{
+	height: 100%;
+	margin: 0;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.container{
+	display: grid;
+	grid-template-rows: 15% 10% auto 10%;
+	grid-template-areas: "header" 
+						 "filtering"
+						 "main"
+						 "footer";
+}
+a{
+	text-decoration: none;
+	color: black;	
+}
+.filtering{
+	margin:2% 4% 4% 4%;
+	padding-bottom: 2%;
+	border-bottom: 1px solid rgb(171,174,178);
+	text-align: center;
+
+}
+
+.header{
+	grid-area: header;
+	padding-top: 1em;
+}
+
+.footer{
+	grid-area: footer;
+	padding: 0 5% 0 5%;
+	background-color: rgba(75, 156, 211, 0.1);
+
+}
+
+.main{
+	display: grid;
+	grid-area: main;
+	grid-template-columns: repeat(3, minmax(250px, 1fr));
+	grid-row-gap: 5%;
+	grid-gap: 5%;
+	text-align: center;
+	width: 100%;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top: 3%;
+}
+
+#icon{
+	visibility: hidden;
+}
+#title{
+	padding-bottom: 0;
+	margin-bottom: 0;
+	font-weight: 700;
+}
+#subtitle{
+	margin-top: 0;
+	padding-top: 0;
+	font-size: 0.93em;
+	margin-left: 1px;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+.btn{
+	border-width: 0;
+}
+#navbar{
+	background-color: white!important;
+	margin:2% 4% 2% 4%;
+	border-bottom: 1px solid rgb(171,174,178);
+}
+.dropdown{
+	display: inline;
+}
+#university{
+	margin-bottom: 2%;
+	text-align: center;	
+}
+.info{
+	margin-top: 3%;
+	text-align: left;
+}
+
+.fa{
+	color: rgb(75, 156, 211);
+}	
+
+.smallText{
+	font-size: 0.8em;
+	margin-bottom: 0;
+}
+h6{
+	font-weight: 700;
+	color: rgb(78,78,78);
+
+
+}
+.picturer{
+	background-color: rgba(171,174,178,0.5);
+}
+.img{
+	height: 100%;
+	width: 100%;
+	object-fit:inherit;
+	max-width: 350px;
+	max-height: 200px;
+	background-color: black;
+}
+a:hover{	
+	text-decoration: none;
+	color: black;
+}
+.rating{
+	margin-bottom: 3%;
+}
+/*.verified{
+	float: right;
+	margin-right: 3%;
+}*/
+@media only screen and (max-width: 929px){
+	.main{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+
+}
+
+#footerNote{
+	display: inline;
+	font-size: 0.8em;
+	padding-left: 10px;
+}
+@media only screen and (max-width: 680px){
+	.headerButtons{
+		display: none;
+		/*visibility: hidden;*/
+	}
+	#icon{
+		visibility: visible;
+		float: right;
+		padding-right: 0;
+	}
+	.main{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+	.img{
+		max-width: 300px;
+	}
+	.info{
+		text-align: center;
+	}
+	.filtering{
+		text-align: center;
+	}
+	.picturer{
+		background-color: white;
+	}
+
+}
+
+
+
+
+
